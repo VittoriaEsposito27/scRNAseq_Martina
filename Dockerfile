@@ -14,9 +14,9 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 
 # Scarica e installa RStudio Server
-RUN wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-latest-amd64.deb && \
-    gdebi -n rstudio-server-latest-amd64.deb && \
-    rm rstudio-server-latest-amd64.deb
+RUN wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.09.0-375-amd64.deb && \
+    gdebi -n rstudio-server-2024.09.0-375-amd64.deb && \
+    rm rstudio-server-2024.09.0-375-amd64.deb
 
 # Installa BiocManager per pacchetti Bioconductor
 RUN R -e "install.packages('BiocManager')"
