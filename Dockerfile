@@ -1,5 +1,5 @@
 # Usa l'immagine base di R con una versione specifica (adatta alla tua necessità)
-FROM rocker/r-ver:latest
+FROM rocker/r-ver:4.4.2
 
 # Aggiorna i pacchetti di sistema e installa le dipendenze necessarie per R e RStudio
 RUN apt-get update && apt-get install -y \
