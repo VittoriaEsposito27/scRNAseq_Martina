@@ -10,13 +10,12 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libhdf5-dev \
     pandoc \
-    gdebi-core && \
-    rm -rf /var/lib/apt/lists/*
+    software-properties-common
 
 # Scarica e installa RStudio Server
-RUN wget https://download2.rstudio.org/server/focal/amd64/rstudio-server-2024.09.0-375-amd64.deb && \
-    gdebi -n rstudio-server-2024.09.0-375-amd64.deb && \
-    rm rstudio-server-2024.09.0-375-amd64.deb
+RUN wget -qO- https://rstudio.org/download/latest/stable/server/bionic/rstudio-server-stable.gpg | apt-key add - && \
+    add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/" && \
+    apt-get update && apt-get install -y rstudio-server
 
 # Installa BiocManager per pacchetti Bioconductor
 RUN R -e "install.packages('BiocManager')"
