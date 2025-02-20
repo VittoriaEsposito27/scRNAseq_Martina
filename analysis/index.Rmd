@@ -8,7 +8,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-This  website contains scRNA-seq data analyses and integration with targeted mutation.
+This  website contains RNA-seq data analyses.
 
 # AML patients from Chiara
 
@@ -17,10 +17,3 @@ This  website contains scRNA-seq data analyses and integration with targeted mut
 - [3-Phenotype genotype integration in sAML1](02_integration_phenotype_genotype_sAML1.html)
 - [4-Phenotype genotype integration in AML4](03_integration_phenotype_genotype_AML4.html)
 - [5-Phenotype genotype integration in AML5](04_integration_phenotype_genotype_AML5.html)
-
-# PALM patients
-
-- [1-Exploratory analysis and malignant cell annotation](00_palm_malignant_non_malignant_annotations.html)
-- [2-Tumor microenviroment identification](01_palm_tme_annotation.html)
-- [3-Phenotype genotype integration in PALM04](02_integration_phenotype_genotype_PALM04.html)
-- [4-Phenotype genotype integration in PALM06](05_integration_phenotype_genotype_PALM06.html) 
